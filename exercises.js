@@ -83,17 +83,50 @@ var fraseNew=frase4.substring(0,1).toUpperCase() + frase4.substring(1,posic+1) +
 
 console.log(fraseNew);
 
-/*3-Arrays
-a-Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)
- Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
-Agregar un elemento al principio y al final del array (utilizar unshift y push).
-Quitar un elemento del principio y del final del array (utilizar shift y pop).
-Invertir el orden del array (utilizar reverse)
-Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
-Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 
+//3-Arrays
 
-If Else
+//a-Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
+//"Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)
+
+var meses=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+console.log(meses[4]);
+console.log(meses[10]);
+
+//b-Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+
+console.log(meses.sort());
+
+//c-Agregar un elemento al principio y al final del array (utilizar unshift y push).
+
+meses.push('Vacaciones');
+meses.unshift('Necesito');
+
+console.log(meses);
+
+//d-Quitar un elemento del principio y del final del array (utilizar shift y pop).
+
+meses.shift();
+meses.pop();
+
+console.log(meses);
+
+//e-Invertir el orden del array (utilizar reverse)
+
+console.log(meses.reverse());
+
+//f-Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
+
+var mesesJuntos=meses.join('-');
+console.log(mesesJuntos);
+
+//g-Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+
+var meses2=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+console.log(meses2.slice(4,11));
+
+/*If Else
 Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”
 Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
 “Bebe” si la edad es menor a 2 años
