@@ -27,23 +27,61 @@ var longTotal= palabra1.length + palabra2.length;
 console.log('Las palabras suman un total de: ' + longTotal + ' letras');
 
 //2-Strings
-//a-Crear una variable de tipo string con al menos 10 caracteres y convertir todo el texto en mayúscula (utilizar toUpperCase).
 
+//a-Crear una variable de tipo string con al menos 10 caracteres y convertir 
+//todo el texto en mayúscula (utilizar toUpperCase).
 
+var palabraMinusc='supercalifragilisticoespialidoso'
 
+console.log(palabraMinusc.toUpperCase());
 
 //b-Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string 
 //con los primeros 5 caracteres guardando el resultado en una nueva variable (utilizar substring).
 
+var frase='Sé fiel, sé fuerte, Dios no falla'
+var fraseReduc=frase.substring(0,5);
 
+console.log(fraseReduc);
 
-//c-Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con los últimos 3 caracteres guardando el resultado en una nueva variable (utilizar substring).
+//c-Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string 
+//con los últimos 3 caracteres guardando el resultado en una nueva variable (utilizar substring).
 
+var fraseReduc2=frase.substring(frase.length-3);
 
+console.log(fraseReduc2);
 
-//d-Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string con la primera letra en mayúscula y las demás en minúscula. Guardar el resultado en una nueva variable (utilizar substring, toUpperCase, toLowerCase y el operador +).
-//e-Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. Encontrar la posición del primer espacio en blanco y guardarla en una variable (utilizar indexOf).
-//f-Crear una variable de tipo string con al menos 2 palabras largas (10 caracteres y algún espacio entre medio). Utilizar los métodos de los ejercicios anteriores para generar un nuevo string que tenga la primera letra de ambas palabras en mayúscula y las demás letras en minúscula (utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
+//d-Crear una variable de tipo string con al menos 10 caracteres y generar un nuevo string
+// con la primera letra en mayúscula y las demás en minúscula. 
+//Guardar el resultado en una nueva variable (utilizar substring, toUpperCase, toLowerCase y el operador +).
+
+var frase2='jesús Te AMA';
+var fraseModif= frase2.substring(0,1).toUpperCase()+frase2.substring(1).toLowerCase();
+
+console.log(fraseModif);
+
+//e-Crear una variable de tipo string con al menos 10 caracteres y algún espacio en blanco. 
+//Encontrar la posición del primer espacio en blanco y guardarla en una variable (utilizar indexOf).
+
+var frase3='Dios es fiel';
+var pos=frase3.indexOf(' ');
+
+console.log(pos);
+
+//f-Crear una variable de tipo string con al menos 2 palabras largas 
+//(10 caracteres y algún espacio entre medio). 
+//Utilizar los métodos de los ejercicios anteriores para generar un nuevo string 
+//que tenga la primera letra de ambas palabras en mayúscula y las demás letras en minúscula 
+//(utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
+
+var frase4='indudaBlemEnte espeRANzador'
+console.log(frase4);
+var posic=frase4.indexOf(' ');
+console.log(posic);
+var frase4=frase4.toLowerCase();
+console.log(frase4);
+var fraseNew=frase4.substring(0,1).toUpperCase() + frase4.substring(1,posic+1) + frase4.substring(posic+1,posic+2).toUpperCase()+frase4.substring(posic+2);
+
+console.log(fraseNew);
 
 /*3-Arrays
 a-Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log)
@@ -53,6 +91,8 @@ Quitar un elemento del principio y del final del array (utilizar shift y pop).
 Invertir el orden del array (utilizar reverse)
 Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+
+
 If Else
 Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”
 Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
@@ -63,6 +103,8 @@ Crear una variable “Age” que contenga un número entero entre 0 y 100 y mues
 “Adulto” entre 31 y 60 años
 “Adulto mayor” entre 61 y 75 años
 “Anciano” si es mayor a 75 años
+
+
 For
 Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
 Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
