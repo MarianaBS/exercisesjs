@@ -126,20 +126,55 @@ console.log(mesesJuntos);
 var meses2=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 console.log(meses2.slice(4,11));
 
-/*If Else
-Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” y sino un alerta con el mensaje “Lower than 0,5”
-Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
+
+//If Else
+
+/*a-Crear un número aleatorio entre 0 y 1 utilizando la función Math.random(), 
+si el valor es mayor o igual que 0,5 mostrar una alerta con el mensaje “Greater than 0,5” 
+y sino un alerta con el mensaje “Lower than 0,5”*/
+
+var aleatorio=Math.random();
+console.log(aleatorio);
+
+if (aleatorio >= 0.5){
+    alert('Greater than 0.5');
+}else{
+    alert('Lower than 0.5');
+}
+
+
+/*b-Crear una variable “Age” que contenga un número entero entre 0 y 100 y muestre los siguientes mensajes de alerta:
 “Bebe” si la edad es menor a 2 años
 “Nino” si la edad es entre 2 y 12 años
 “Adolecente” si la edad es entre 13 y 19 años
 “Joven” si la edad está entre 20 y 30 años
 “Adulto” entre 31 y 60 años
 “Adulto mayor” entre 61 y 75 años
-“Anciano” si es mayor a 75 años
+“Anciano” si es mayor a 75 años*/
+
+var Age=Math.floor(Math.random()*101); //esta formula la googlee para no tener que dejar un valor fijo
+console.log(Age);
+
+if(Age<2){
+    alert('Bebé');
+}else if (Age >= 2 && Age <= 12){
+    alert('Niño');
+}else if(Age>12 && Age <=19){
+    alert('Adolescente');
+}else if(Age>19 && Age<=30){
+    alert('Joven');
+}else if(Age>30 && Age <=60){
+    alert('Adulto');
+}else if(Age>60 && Age<=75){
+    alert('Adulto mayor');
+}else if(Age>75){
+    alert('Anciano');
+}
 
 
-For
-Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
+//For
+
+/*Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
 Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
 Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
 Crear una array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, es decir que al final de la ejecución del bucle for deberia haber 10 elementos dentro del array, desde el número 0 hasta al numero 9. Mostrar por la consola del navegador el al array final (utilizar console.log).
