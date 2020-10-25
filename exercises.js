@@ -124,7 +124,9 @@ console.log(mesesJuntos);
 //g-Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 
 var meses2=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-console.log(meses2.slice(4,11));
+var copiaMeses2=meses2.slice(4,11);
+
+console.log(copiaMeses2);
 
 
 //If Else
@@ -172,14 +174,49 @@ if(Age<2){
 }
 
 
-
 //For
 
-/*Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
-Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
-Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
-Crear una array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, es decir que al final de la ejecución del bucle for deberia haber 10 elementos dentro del array, desde el número 0 hasta al numero 9. Mostrar por la consola del navegador el al array final (utilizar console.log).
-Funciones
+/*a-Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript 
+para mostrar una alerta utilizando cada una de las palabras.*/
+
+var dias=["lunes","martes","miércoles","jueves","viernes"];
+for(var i=0; i<dias.length;i++){
+    console.log(dias[i]);
+}
+
+
+/*b-Al array anterior convertir la primera letra de cada palabra en mayúscula 
+y mostrar una alerta por cada palabra modificada.*/
+
+for(var i=0; i<dias.length;i++){
+    /*dias[i]=dias[i].substring(0,1).toUpperCase()+dias[i].substring(1);   
+    alert(dias[i]);*/
+    alert(dias[i].substring(0,1).toUpperCase()+dias[i].substring(1));
+}
+
+
+/*c-Crear una variable llamada “sentence” que tenga un string vacío, 
+luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. 
+Al final mostrar una única alerta con la cadena completa.*/
+
+var sentence='';
+for(var i=0; i<dias.length;i++){
+    sentence+=dias[i];
+}
+console.log(sentence);
+
+
+/*d-Crear un array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, 
+es decir que al final de la ejecución del bucle for deberia haber 10 elementos dentro del array, 
+desde el número 0 hasta al numero 9. Mostrar por la consola del navegador el al array final (utilizar console.log).*/
+
+var arreglo= new Array;
+for(var i=0;i<10;i++){
+    arreglo[i]=i;
+}
+console.log(arreglo);
+
+/*Funciones
 Crear una función suma que reciba dos valores numéricos y retorne el resultado. Ejecutar la función y guardar el resultado en una variable, mostrando el valor de dicha variable en la consola del navegador.
 A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número, mostrar una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como resultado.
 Crear una función validate integer que reciba un número como parámetro y verdadero si es un número entero.
