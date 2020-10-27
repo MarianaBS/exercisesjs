@@ -99,18 +99,18 @@ console.log(meses[10]);
 console.log(meses.sort());
 
 //c-Agregar un elemento al principio y al final del array (utilizar unshift y push).
+var meses1=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+meses1.push('Vacaciones');
+meses1.unshift('Necesito');
 
-meses.push('Vacaciones');
-meses.unshift('Necesito');
-
-console.log(meses);
+console.log(meses1);
 
 //d-Quitar un elemento del principio y del final del array (utilizar shift y pop).
 
-meses.shift();
-meses.pop();
+meses1.shift();
+meses1.pop();
 
-console.log(meses);
+console.log(meses1);
 
 //e-Invertir el orden del array (utilizar reverse)
 
@@ -118,7 +118,7 @@ console.log(meses.reverse());
 
 //f-Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 
-var mesesJuntos=meses.join('-');
+var mesesJuntos=meses1.join('-');
 console.log(mesesJuntos);
 
 //g-Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
@@ -181,7 +181,7 @@ para mostrar una alerta utilizando cada una de las palabras.*/
 
 var dias=["lunes","martes","miércoles","jueves","viernes"];
 for(var i=0; i<dias.length;i++){
-    console.log(dias[i]);
+    alert(dias[i]);
 }
 
 
@@ -203,7 +203,7 @@ var sentence='';
 for(var i=0; i<dias.length;i++){
     sentence+=dias[i];
 }
-console.log(sentence);
+alert(sentence);
 
 
 /*d-Crear un array vacío y con un bucle for de 10 repeticiones llenar el array con el número de la repetición, 
@@ -223,17 +223,17 @@ console.log(arreglo);
 Ejecutar la función y guardar el resultado en una variable, 
 mostrando el valor de dicha variable en la consola del navegador.*/
 
-function sumar(num1,num2){
+function sumar1(num1,num2){
     return num1+num2;
 }
-var resultado=sumar(10,27);
-console.log(resultado);
+var resultado1=sumar1(10,27);
+console.log(resultado1);
 
 
 /*b-A la función suma anterior, agregarle una validación para controlar si alguno de los parámetros no es un número, 
 mostrar una alerta aclarando que uno de los parámetros tiene error y retornar el valor NaN como resultado.*/
 
-function sumar(num1,num2){
+function sumar2(num1,num2){
     if(typeof(num1)!='number' || typeof(num2)!='number'){
         alert('Uno de los parámetros no es un número');
         return NaN;
@@ -241,10 +241,10 @@ function sumar(num1,num2){
         return num1+num2;
     }
 }
-var resultado=sumar(10,27);
-console.log(resultado);
-var resultado=sumar('mariana',27);
-console.log(resultado);
+var resultado2=sumar2(10,27);
+console.log(resultado2);
+var resultado2=sumar2('mariana',27);
+console.log(resultado2);
 
 /*c-Crear una función validate integer que reciba un número como parámetro 
 y verdadero si es un número entero.*/
@@ -262,7 +262,7 @@ console.log(validate_integer(21));
 /*d-A la función suma del ejercicio 6b) agregarle una llamada que valide que los números sean enteros. 
 En caso que haya decimales mostrar un alerta con el error y retorna el número convertido a entero (redondeado).*/
 
-function sumar(num1,num2){
+function sumar3(num1,num2){
     if(typeof(num1)!='number' || typeof(num2)!='number'){
         alert('Uno de los parámetros no es un número');
         return NaN;
@@ -278,10 +278,10 @@ function sumar(num1,num2){
         return num1+num2;
     }  
 }
-console.log(sumar(2.5,3.3));
-console.log(sumar(2.5,8));
-console.log(sumar(11,3.3));
-console.log(sumar(22,28));
+console.log(sumar3(2.5,3.3));
+console.log(sumar3(2.5,8));
+console.log(sumar3(11,3.3));
+console.log(sumar3(22,28));
 
 
 /*E-Convertir la validación del ejercicio 6b) en una función separada y llamarla dentro de la función suma
@@ -294,7 +294,7 @@ console.log(sumar(22,28));
          return true;
      }
  }
- function sumar(n1,n2){
+ function sumar4(n1,n2){
      if(!esNumero(n1) || !esNumero(n2)){
         alert('Uno de los parámetros no es un número');
         return NaN;
@@ -303,5 +303,5 @@ console.log(sumar(22,28));
          return n1+n2;
      }
  }
-console.log(sumar(4,9));
-console.log(sumar('m','a'));
+console.log(sumar4(4,9));
+console.log(sumar4('m','a'));
