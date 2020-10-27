@@ -268,20 +268,45 @@ function sumar3(num1,num2){
         return NaN;
     }else{
         if (!validate_integer(num1)){
-            alert('El primer número ingresado no es entero. Se ha redondeado al más próximo');
             num1=Math.round(num1);
+            alert('El primer número ingresado no es entero. Se ha redondeado al más próximo: ' + num1);
         }
         if(!validate_integer(num2)){
-            alert('El segundo número ingresado no es entero. Se ha redondeado al más próximo');
             num2=Math.round(num2);
+            alert('El segundo número ingresado no es entero. Se ha redondeado al más próximo: ' + num2);
         }
         return num1+num2;
     }  
 }
-console.log(sumar3(2.5,3.3));
-console.log(sumar3(2.5,8));
-console.log(sumar3(11,3.3));
+console.log(sumar3(2.5,7.3));
+console.log(sumar3(9.5,8));
+console.log(sumar3(11,0.3));
 console.log(sumar3(22,28));
+
+//***********Otra interpretacion del problema******************
+
+function sumar5(num1,num2){
+    if(typeof(num1)!='number' || typeof(num2)!='number'){
+        alert('Uno de los parámetros no es un número');
+        return NaN;
+    }else{
+        if (!validate_integer(num1)){
+            num1=Math.round(num1);
+            alert('El primer número ingresado no es entero. Se ha redondeado al más próximo' );
+            return num1;
+        }else if(!validate_integer(num2)){
+            num2=Math.round(num2);
+            alert('El segundo número ingresado no es entero. Se ha redondeado al más próximo');
+            return num2;
+        }else {
+            return num1+num2;
+        }
+    }  
+}
+console.log(sumar5(2.5,7.3));
+console.log(sumar5(9.5,8));
+console.log(sumar5(11,0.3));
+console.log(sumar5(22,28));
 
 
 /*E-Convertir la validación del ejercicio 6b) en una función separada y llamarla dentro de la función suma
